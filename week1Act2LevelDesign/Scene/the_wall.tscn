@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://73ntpbfjbd20"]
+
+[ext_resource type="PackedScene" uid="uid://nve3gflyq82x" path="res://Scene/hurt_box.tscn" id="1_o4mh3"]
+[ext_resource type="Texture2D" uid="uid://bg4itdfr3ubqt" path="res://Asset/spike_wall.png" id="2_ebxwu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yshr7"]
+size = Vector2(13, 64)
+
+[node name="The Wall" type="Node2D" unique_id=1333196899]
+
+[node name="HurtBox" parent="." unique_id=911737968 instance=ExtResource("1_o4mh3")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1930066212]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_yshr7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1231274484]
+texture = ExtResource("2_ebxwu")
